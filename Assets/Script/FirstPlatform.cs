@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class FirstPlatform : MonoBehaviour
 {
-    public float fallSpeed;
-    public GameObject platform1;
-
+    [SerializeField] private float _fallSpeed;
+    [SerializeField] private GameObject _platform;
 
     void Update()
     {
         Fall();
     }
+
     void FixedUpdate()
     {
         Dead();
     }
+
     void Fall()
     {
-        transform.position = new Vector2(transform.position.x, transform.position.y - fallSpeed * Time.deltaTime);
-
+        transform.position = new Vector2(transform.position.x, transform.position.y - _fallSpeed * Time.deltaTime);
     }
-
     
     void Dead()
     {
         if (transform.position.y < -3f)
         {
-            Destroy(platform1);
+            Destroy(_platform);
         }
     }
-
 }

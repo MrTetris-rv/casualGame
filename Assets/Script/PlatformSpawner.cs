@@ -5,16 +5,20 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     public static PlatformSpawner instance;
-    [SerializeField] 
-    private GameObject leftPlatform, rightPlatform;
-    private float left_X_Min = -2f, left_X_Max = -0.76f, right_X_Min = 2f, right_X_Max = 0.76f;
-    private float y_Treshold = 4.6f; //высота между платформами
-    private float last_Y;
-    public int spawn_Count = 8;
-    private int platform_Spawned;
 
-    [SerializeField]
-    private Transform platform_Parent;
+    [SerializeField] private GameObject _leftPlatform;
+    [SerializeField] private GameObject _rightPlatform;
+    [SerializeField] private Transform _platform_Parent;
+    [SerializeField] private int _spawn_Count = 8;
+
+    private float _left_X_Min = -2f;
+    private float _left_X_Max = -0.76f;
+    private float _right_X_Min = 2f;
+    private float _right_X_Max = 0.76f;
+    private float _y_Treshold = 4.6f; 
+    private float _last_Y;
+    private int _platform_Spawned;
+
     void Awake()
     {
         if (instance == null)
@@ -22,34 +26,34 @@ public class PlatformSpawner : MonoBehaviour
             instance = this;
         }
     }
+    
     void Start()
     {
-        last_Y = transform.position.y;
-
+        _last_Y = transform.position.y;
         SpawnPlatform();
     }
-    // Update is called once per frame
-    public void SpawnPlatform()
+   
+    private void SpawnPlatform()
     {
         Vector2 temp = Vector2.zero;
         GameObject newPatform = null;
 
-        for(int i = 0; i < spawn_Count; i++)
+        for (int i = 0; i < _spawn_Count; i++)
         {
-            temp.y = last_Y;
-            if((platform_Spawned % 2) == 0){
-                temp.x = Random.Range(left_X_Min, left_X_Max);
-                newPatform = Instantiate(rightPlatform, temp, Quaternion.identity);
+            temp.y = _last_Y;
+            if (_platform_Spawned % 2 == 0){
+                temp.x = Random.Range(_left_X_Min, _left_X_Max);
+                newPatform = Instantiate(_rightPlatform, temp, Quaternion.identity);
             }
             else
             {
-                temp.x = Random.Range(right_X_Min, right_X_Max);
-                newPatform = Instantiate(leftPlatform, temp, Quaternion.identity);
+                temp.x = Random.Range(_right_X_Min, _right_X_Max);
+                newPatform = Instantiate(_leftPlatform, temp, Quaternion.identity);
             }
-            newPatform.transform.parent = platform_Parent;
+            newPatform.transform.parent = _platform_Parent;
 
-            last_Y += y_Treshold;
-            platform_Spawned++;
+            _last_Y += _y_Treshold;
+            _platform_Spawned++;
         }
     }
 }

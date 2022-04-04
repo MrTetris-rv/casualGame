@@ -4,29 +4,21 @@ using UnityEngine;
 
 public class MovementPlatformsSide : MonoBehaviour
 {
-    public float Speed = 2f;
-    float hor;
-    bool MovingRight = true;
+    [SerializeField] private float _speed = 2f;
 
- 
-  
-    // Update is called once per frame
+    private bool _isMovingRight = true;
+
     void Update()
     {
-        if(transform.position.x > 2f)
+        if (transform.position.x > 2f)
         {
-            MovingRight = false;
-        }else if(transform.position.x < -2f)
-        {
-            MovingRight = true;
+            _isMovingRight = false;
         }
-        if (MovingRight)
+        else if (transform.position.x < -2f)
         {
-            transform.position = new Vector2(transform.position.x + Speed * Time.deltaTime, transform.position.y);
+            _isMovingRight = true;
         }
-        else
-        {
-            transform.position = new Vector2(transform.position.x - Speed * Time.deltaTime, transform.position.y);
-        }
+
+        transform.position = _isMovingRight ? new Vector2(transform.position.x + _speed * Time.deltaTime, transform.position.y) : new Vector2(transform.position.x - _speed * Time.deltaTime, transform.position.y);
     }
 }

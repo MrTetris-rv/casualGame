@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DieScreen : MonoBehaviour
 {
-  
   public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
-       
-    }
+  {
+      SceneManager.LoadScene(SceneNames.MenuSceneName);
+  }
 }

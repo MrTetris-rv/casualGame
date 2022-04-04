@@ -1,26 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 public class TrailEffect : MonoBehaviour
 {
-    public float timeBtwSpawns;
-    public float startTimeBtwSpawns;
+    [SerializeField] private float _timeBtwSpawns;
+    [SerializeField] private float _startTimeBtwSpawns;
+    [SerializeField] private GameObject _player;
 
-    public GameObject echo;
+    private void Start()
+    {
+        Debug.Log("hello");
+    }
 
     private void Update()
     {
-        if(timeBtwSpawns <= 0)
-        {
-            Instantiate(echo, transform.position, Quaternion.identity);
-            timeBtwSpawns = startTimeBtwSpawns;
-        }
-        else
-        {
-            timeBtwSpawns -= Time.deltaTime;
-        }
+        /*{
+            if(_timeBtwSpawns <= 0)
+            {
+                Instantiate(_player, transform.position, Quaternion.identity);
+                _timeBtwSpawns = _startTimeBtwSpawns;
+            }
+            else
+            {
+                _timeBtwSpawns -= Time.deltaTime;
+            }
+        }*/
     }
 }

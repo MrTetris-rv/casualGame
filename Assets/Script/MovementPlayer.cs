@@ -1,113 +1,79 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 public class MovementPlayer : MonoBehaviour
 {
-    public GameObject DeathScreen;
-    private Rigidbody2D playerRigid;
-    private bool playerDied;
-    public float jumpSpeed;
-    bool isPlatform;
-    bool isDead;
-    public Text textScore;
-    private int topScore = 0;
-    public Text endScore;
-    public Text highScore;
-    public GameObject death;
-    public GameObject player;
-
-    [SerializeField]
-    float leftLimit;
-    [SerializeField]
-    float rightLimit;
-
+    [SerializeField] private float _jumpSpeed;
+    [SerializeField] private float _leftLimit;
+    [SerializeField] private float _rightLimit;
+    [SerializeField] private CharacterBase _player;
+    [SerializeField] private TrailRenderer _trailRenderer;
+    
+    private bool _isPlatform;
+    private bool _isDead;
     public AudioSource aud;
-   
 
-    private void Awake()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        playerRigid = GetComponent<Rigidbody2D>();
-    }
-
-    private void Start()
-    {
-       
-        highScore.text = PlayerPrefs.GetInt("High Score: ", 0).ToString();
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "platform" || collision.gameObject.tag == "platform1")
+        if (collision.gameObject.CompareTag(Tags.instance.Platform) || 
+            collision.gameObject.CompareTag(Tags.instance.PlatformFirst))
         {
-            isPlatform = true;
-            this.transform.parent = collision.transform;
-
+            _isPlatform = true;
+            transform.parent = collision.transform;
         }
          
-        
-        if (collision.gameObject.tag == "fire")
+        if (collision.gameObject.CompareTag(Tags.instance.Fire))
         {
-           
-            Instantiate(death, transform.position, Quaternion.identity);
-            isDead = true;
+            _isDead = true;
         }
     }
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "platform" || collision.gameObject.tag == "platform1")
-        {
-            isPlatform = false;
-            this.transform.parent = null;
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(Tags.instance.Platform) || 
+            collision.gameObject.CompareTag(Tags.instance.PlatformFirst))
+        {
+            _isPlatform = false;
+            transform.parent = null;
         }
       
-            if (collision.gameObject.tag == "fire")
+        if (collision.gameObject.CompareTag(Tags.instance.Fire))
         {
-            isDead = false;
+            _isDead = false;
         }
     }
 
-
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-     
-        if (isDead && !DeathScreen.activeSelf)
-        {
-            aud.Stop();
-            Destroy(player);
-            DeathScreen.SetActive(true);
-
-        }
-       
+        if (!_isDead) return;
+        
+        aud.Stop();
+        _player.PlayerIsDead();
     }
 
-    void Update()
+    private void Update()
     {
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, leftLimit, rightLimit),transform.position.y);
-
-
-
+        Vector3 position = transform.position;
+        position = new Vector2(Mathf.Clamp(position.x, _leftLimit, _rightLimit),position.y);
+        transform.position = position;
         Jump();
-        if (playerRigid.velocity.y > 0 && transform.position.y > topScore)
+        if (_player.PlayerRigidbody2D.velocity.y > 0 && transform.position.y > ScoreManager.Instance.TopScore)
         {
-            topScore = (int)transform.position.y;
+            ScoreManager.Instance.TopScore = (int)transform.position.y;
+        }
 
-        }
-        textScore.text = endScore.text = topScore.ToString();
-        if (topScore > PlayerPrefs.GetInt("High Score: ", 0))
+        if (ScoreManager.Instance.TopScore <= PlayerPrefs.GetInt("High Score: ", 0))
         {
-            PlayerPrefs.SetInt("High Score: ", topScore);
-            highScore.text = topScore.ToString();
+            return;
         }
+        PlayerPrefs.SetInt("High Score: ", ScoreManager.Instance.TopScore);
     }
 
-    void Jump()
+    private void Jump()
     {
-        if (isPlatform && Input.GetButtonDown("Jump"))
+        if (_isPlatform && Input.GetButtonDown("Jump"))
         {
-            playerRigid.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+            _player.PlayerRigidbody2D.AddForce(Vector2.up * _jumpSpeed, ForceMode2D.Impulse);
         }
     }
 }

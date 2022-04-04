@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class FireMovement : MonoBehaviour
 {
-    GameObject fire;
-    public float speed;
-   public  GameObject player;
-    private bool moveFire;
-    // Update is called once per frame
+    //GameObject fire;
+    [SerializeField] private float _speed;
+    [SerializeField] private GameObject _player;
+
+    private bool _isMoveFire;
+
     void Update()
     {
         Movement();
     }
-    void Movement()
+    
+    private void Movement()
     {
-        if (player == null)
+        _isMoveFire = _player != null;
+        if (_isMoveFire)
         {
-            moveFire = false;
-            
-        }
-        else
-        {
-            moveFire = true;
-          
-        }
-        if (moveFire)
-        {
-            transform.position = new Vector2(transform.position.x, transform.position.y + speed * Time.deltaTime);
+            transform.position = new Vector2(transform.position.x, transform.position.y + _speed * Time.deltaTime);
         }
     }
 }

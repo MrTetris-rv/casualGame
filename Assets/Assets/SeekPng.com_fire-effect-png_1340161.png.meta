@@ -1,0 +1,350 @@
+fileFormatVersion: 2
+guid: 3c5458bae3fab9648b00bb954685f941
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8446970874953004586
+    second: SeekPng.com_fire-effect-png_1340161_0
+  - first:
+      213: 3716582966527587490
+    second: SeekPng.com_fire-effect-png_1340161_1
+  - first:
+      213: -8854943232368645945
+    second: SeekPng.com_fire-effect-png_1340161_2
+  - first:
+      213: -5351311140849818314
+    second: SeekPng.com_fire-effect-png_1340161_3
+  - first:
+      213: -5945923015452971811
+    second: SeekPng.com_fire-effect-png_1340161_4
+  - first:
+      213: 6519989630705063176
+    second: SeekPng.com_fire-effect-png_1340161_5
+  - first:
+      213: 6015371348348442946
+    second: SeekPng.com_fire-effect-png_1340161_6
+  - first:
+      213: 3933920571042036310
+    second: SeekPng.com_fire-effect-png_1340161_7
+  - first:
+      213: 8428613641104394365
+    second: SeekPng.com_fire-effect-png_1340161_8
+  - first:
+      213: -3936177512267849167
+    second: SeekPng.com_fire-effect-png_1340161_0
+  - first:
+      213: 8972085791739895502
+    second: SeekPng.com_fire-effect-png_1340161_1
+  - first:
+      213: -5539258286005117182
+    second: SeekPng.com_fire-effect-png_1340161_2
+  - first:
+      213: 397036657154389859
+    second: SeekPng.com_fire-effect-png_1340161_3
+  - first:
+      213: -3863949550488462018
+    second: SeekPng.com_fire-effect-png_1340161_4
+  - first:
+      213: 8228213806154053657
+    second: SeekPng.com_fire-effect-png_1340161_5
+  - first:
+      213: -3734263225774823309
+    second: SeekPng.com_fire-effect-png_1340161_6
+  - first:
+      213: 1352131943390441001
+    second: SeekPng.com_fire-effect-png_1340161_7
+  - first:
+      213: 8508303528705682009
+    second: SeekPng.com_fire-effect-png_1340161_8
+  - first:
+      213: -3911501990621310395
+    second: SeekPng.com_fire-effect-png_1340161_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 1024
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26f4adb14ba93570800000000000000
+      internalID: 8446970874953004586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 635
+        width: 1024
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4f42a4484f39330800000000000000
+      internalID: 3716582966527587490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 753
+        width: 1024
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8ea60bb0cec1580800000000000000
+      internalID: -8854943232368645945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_3
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 749
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6356e0faed25cb5b0800000000000000
+      internalID: -5351311140849818314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 1024
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc2b123586db7da0800000000000000
+      internalID: -5945923015452971811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 508
+        width: 1024
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805d7655608ab7a50800000000000000
+      internalID: 6519989630705063176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 1024
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2491f5ade54ea7350800000000000000
+      internalID: 6015371348348442946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65aff83aae7189630800000000000000
+      internalID: 3933920571042036310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_fire-effect-png_1340161_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 1024
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d780a0b237378f470800000000000000
+      internalID: 8428613641104394365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
